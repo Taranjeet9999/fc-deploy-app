@@ -1,0 +1,29 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "89bb00a906c44baf66f1da6a240e34e9"
+name = "fc-deploy-app"
+handle = "fc-deploy-app"
+application_url = "https://total-desk-imported-belongs.trycloudflare.com"
+embedded = true
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "test-development-fc-app.myshopify.com"
+include_config_on_deploy = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "read_checkouts,read_orders,read_products,read_shipping,unauthenticated_read_checkouts,unauthenticated_write_checkouts,write_checkouts,write_orders,write_products,write_shipping"
+
+[auth]
+redirect_urls = [
+  "https://total-desk-imported-belongs.trycloudflare.com/auth/callback",
+  "https://total-desk-imported-belongs.trycloudflare.com/auth/shopify/callback",
+  "https://total-desk-imported-belongs.trycloudflare.com/api/auth/callback"
+]
+
+[webhooks]
+api_version = "2024-04"
+
+[pos]
+embedded = false
