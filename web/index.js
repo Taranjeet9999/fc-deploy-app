@@ -571,7 +571,7 @@ app.post("/api/carrier-service/create", async (_req, res) => {
   try {
     const carrier_service = new shopify.api.rest.CarrierService({ session: res.locals.shopify.session });
     carrier_service.name = "Fast Courier";
-    carrier_service.callback_url = "https://total-desk-imported-belongs.trycloudflare.com/api/shipping-rates";
+    carrier_service.callback_url = "https://fc-app.vuwork.com/api/shipping-rates";
     carrier_service.service_discovery = true;
     await carrier_service.save({
       update: true,
@@ -588,7 +588,7 @@ app.post("/api/carrier-service/update", async (_req, res) => {
     const carrier_service = new shopify.api.rest.CarrierService({ session: res.locals.shopify.session });
     carrier_service.id = 68364501211;
     carrier_service.name = "Fast Courier";
-    carrier_service.callback_url = "https://total-desk-imported-belongs.trycloudflare.com/api/shipping-rates";
+    carrier_service.callback_url = "https://fc-app.vuwork.com/api/shipping-rates";
     await carrier_service.save({
       update: true,
     });
