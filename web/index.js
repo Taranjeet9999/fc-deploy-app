@@ -8,8 +8,24 @@ import shopify from "./shopify.js";
 import PrivacyWebhookHandlers from "./privacy.js";
 import bodyParser from "body-parser";
 import sqlite3 from 'sqlite3';
+import log4js from 'log4js';
 
-
+log4js.configure({
+  appenders: {
+    file: {
+      type: "file",
+      filename: "logs.log"
+    }
+  },
+  categories: {
+    default: {
+      appenders:
+        ["file"], level: "info"
+    }
+  },
+});
+//Create a logger object 
+const logger = log4js.getLogger();
 const db = new sqlite3.Database('./database.sqlite', sqlite3.OPEN_READWRITE, (err) => {
   if (err) {
     console.error(err.message, "eroroorro");
@@ -602,13 +618,23 @@ app.post("/api/carrier-service/update", async (_req, res) => {
 //DONE
 app.get("/api/orders", async (_req, res) => {
   try {
+ 
+    logger.info("_req_req_req_req_req_req_req_req_req_req_req");
+    logger.info(_req);
+    logger.info("_req_req_req_req_req_req_req_req_req_req_req");
+     
     const orders = await shopify.api.rest.Order.all({
       session: res.locals.shopify.session,
       status: "any",
     });
+    logger.info("ordersordersordersordersordersordersordersordersorders");
+    logger.info(orders);
+    logger.info("ordersordersordersordersordersordersordersordersorders");
     res.status(200).send(orders);
   } catch (error) {
     console.log("orders=", error);
+     
+
   }
 });
 //DONE

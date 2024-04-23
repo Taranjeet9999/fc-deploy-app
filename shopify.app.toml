@@ -3,7 +3,7 @@
 client_id = "89bb00a906c44baf66f1da6a240e34e9"
 name = "fc-deploy-app"
 handle = "fc-deploy-app"
-application_url = "https://total-desk-imported-belongs.trycloudflare.com"
+application_url = "https://overhead-robust-loud-authority.trycloudflare.com"
 embedded = true
 
 [build]
@@ -17,9 +17,9 @@ scopes = "read_checkouts,read_orders,read_products,read_shipping,unauthenticated
 
 [auth]
 redirect_urls = [
-  "https://total-desk-imported-belongs.trycloudflare.com/auth/callback",
-  "https://total-desk-imported-belongs.trycloudflare.com/auth/shopify/callback",
-  "https://total-desk-imported-belongs.trycloudflare.com/api/auth/callback"
+  "https://overhead-robust-loud-authority.trycloudflare.com/auth/callback",
+  "https://overhead-robust-loud-authority.trycloudflare.com/auth/shopify/callback",
+  "https://overhead-robust-loud-authority.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]

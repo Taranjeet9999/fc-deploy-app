@@ -25,8 +25,8 @@ const shopify = shopifyApp({
     hostName: "https://fc-app.vuwork.com/",
     apiKey: "89bb00a906c44baf66f1da6a240e34e9",
     apiSecretKey: "1de61fb9b8a504999750b07a15099cc9",
-    // scopes: "write_products",
-    scopes: "read_checkouts,read_orders,read_products,read_shipping,unauthenticated_read_checkouts,unauthenticated_write_checkouts,write_checkouts,write_orders,write_products,write_shipping",
+    scopes: "write_products",
+    // scopes: "read_checkouts,read_orders,read_products,read_shipping,unauthenticated_read_checkouts,unauthenticated_write_checkouts,write_checkouts,write_orders,write_products,write_shipping",
   },
   auth: {
     path: "/api/auth",
